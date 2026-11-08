@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10월 AS 운영 실적 보고</title>
+<!-- [고정] style 시작 -->
+<style>
+:root { --red: #EA002C; --ink: #1A1A1A; --sub: #5F6368; --dim: #9AA0A6; --line: #E3E5E8; --soft: #F5F6F8; --ok: #14804A; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #E9EBEE; color: var(--ink); font-family: "Malgun Gothic", "맑은 고딕", sans-serif; }
+.slide { position: relative; width: 1920px; height: 1080px; margin: 0 auto 24px; background: #fff; padding: 150px 120px 120px; display: flex; flex-direction: column; }
+.js body, .js { overflow: hidden; height: 100%; }
+.js #stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform: translate(-50%, -50%) scale(var(--s, 1)); }
+.js .slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .4s, visibility .4s; }
+.js .slide.on { opacity: 1; visibility: visible; }
+.hd { position: absolute; left: 120px; right: 120px; top: 44px; height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--ink); }
+.hd b { font-size: 28px; letter-spacing: -.02em; }
+.badge { font-size: 18px; font-weight: 700; color: var(--red); border: 2px solid var(--red); border-radius: 6px; padding: 4px 12px; }
+.ft { position: absolute; left: 120px; right: 120px; bottom: 40px; display: flex; justify-content: space-between; font-size: 18px; color: var(--dim); border-top: 1px solid var(--line); padding-top: 14px; }
+.tag { font-size: 22px; font-weight: 700; color: var(--red); margin-bottom: 12px; }
+.t { font-size: 52px; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; }
+.lead { font-size: 26px; color: var(--sub); margin-top: 14px; line-height: 1.45; }
+.body { flex: 1; min-height: 0; margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+.cols { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 56px; }
+.cue { align-self: flex-start; font-size: 18px; color: var(--sub); background: var(--soft); border-radius: 999px; padding: 6px 16px; }
+.chart { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.cwrap { flex: 1; min-height: 0; }
+.ctool { display: flex; gap: 12px; align-items: center; margin-bottom: 6px; }
+.ctool button, .nav button { font: inherit; font-size: 18px; border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 6px 16px; cursor: pointer; }
+.ctool button.on { background: var(--ink); color: #fff; }
+.side { display: flex; flex-direction: column; gap: 14px; }
+.side h3 { font-size: 20px; color: var(--sub); }
+.side .big { font-size: 32px; font-weight: 700; line-height: 1.35; }
+.side p { font-size: 22px; color: var(--sub); line-height: 1.5; }
+.box { background: var(--soft); border-radius: 12px; padding: 16px 20px; font-size: 22px; line-height: 1.45; }
+.box i { display: block; font-style: normal; font-size: 17px; color: var(--sub); }
+.kpis, .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 28px; margin: auto 0; }
+.kpi { border: 1px solid var(--line); border-radius: 16px; padding: 36px 34px; display: flex; flex-direction: column; gap: 10px; }
+.kpi.ng { border: 2px solid var(--red); }
+.kpi .k { font-size: 24px; color: var(--sub); }
+.kpi .v { font-size: 72px; font-weight: 700; line-height: 1; white-space: nowrap; }
+.kpi .v small { font-size: 28px; font-weight: 400; margin-left: 6px; color: var(--sub); }
+.kpi .m { font-size: 20px; color: var(--sub); }
+.kpi .m b { font-size: 16px; color: #fff; background: var(--ok); border-radius: 6px; padding: 2px 8px; margin-right: 8px; }
+.kpi.ng .m b { background: var(--red); }
+.spark { height: 90px; }
+.card { background: var(--soft); border-radius: 16px; padding: 34px; display: flex; flex-direction: column; gap: 14px; }
+.card .no { font-size: 22px; font-weight: 700; color: var(--red); }
+.card h3 { font-size: 32px; }
+.card p { font-size: 22px; color: var(--sub); line-height: 1.55; }
+table.tbl { width: 100%; border-collapse: collapse; font-size: 22px; margin: auto 0; }
+.tbl th { text-align: left; color: var(--sub); border-bottom: 2px solid var(--ink); padding: 12px 14px; }
+.tbl td { border-bottom: 1px solid var(--line); padding: 14px; }
+.tbl .n { text-align: right; }
+.tbl tr.hi td { color: var(--red); font-weight: 700; }
+.src { font-size: 17px; color: var(--dim); margin-top: auto; }
+.cover { justify-content: center; padding-left: 160px; }
+.cover .t { font-size: 84px; }
+.cover .meta { font-size: 24px; color: var(--sub); margin-top: 48px; border-left: 6px solid var(--red); padding-left: 20px; line-height: 1.7; }
+.end { justify-content: center; align-items: center; text-align: center; }
+.note { display: none; }
+.notes .slide.on .note { display: block; position: absolute; left: 120px; right: 120px; bottom: 90px; background: rgba(26,26,26,.92); color: #fff; font-size: 24px; line-height: 1.55; border-radius: 14px; padding: 22px 28px; }
+#tip { position: fixed; display: none; pointer-events: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.14); padding: 10px 14px; font-size: 15px; line-height: 1.5; z-index: 20; }
+#err { position: fixed; left: 0; right: 0; top: 0; background: var(--red); color: #fff; font-size: 16px; padding: 8px 16px; z-index: 30; display: none; }
+.nav { position: fixed; right: 16px; bottom: 12px; display: none; gap: 6px; z-index: 10; opacity: .4; }
+.js .nav { display: flex; }
+.nav:hover { opacity: 1; }
+.nav button { font-size: 14px; padding: 4px 10px; }
+.grow-y { transform-box: fill-box; transform-origin: bottom; animation: growY .7s ease both; }
+.grow-x { transform-box: fill-box; transform-origin: left; animation: growX .7s ease both; }
+.fade { animation: fade .5s .5s both; }
+.draw { stroke-dasharray: 1; animation: draw 1s ease both; }
+.dim { opacity: .25; }
+@keyframes growY { from { transform: scaleY(0); } }
+@keyframes growX { from { transform: scaleX(0); } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes draw { from { stroke-dashoffset: 1; } }
+@media print {
+  @page { size: 1920px 1080px; margin: 0; }
+  .js body, .js { overflow: visible; height: auto; }
+  .js #stage { position: static; transform: none; width: auto; height: auto; }
+  .js .slide { position: relative; opacity: 1; visibility: visible; break-after: page; }
+  .nav, #tip, #err { display: none !important; }
+  * { animation: none !important; }
+}
+</style>
+<!-- [고정] style 끝 -->
+</head>
+<body>
+<div id="err"></div>
+<div id="tip"></div>
+<div class="nav"><button id="pv">‹ 이전</button><button id="nx">다음 ›</button><button id="fs">전체 화면</button><button id="nt">발표 노트</button></div>
+
+<!-- ▼▼▼ [AI 작성 1] 보고서 정보 ▼▼▼ -->
+<script>
+var META = {
+  title: "10월 AS 운영 실적 보고",
+  dept: "○○팀 ○○○ 매니저",
+  date: "2026. 11.",
+  badge: "사내한정"
+};
+</script>
+<!-- ▲▲▲ [AI 작성 1] 끝 ▲▲▲ -->
+
+<div id="stage">
+<!-- ▼▼▼ [AI 작성 2] 슬라이드 ▼▼▼ -->
+
+<section class="slide cover">
+  <div class="tag">월간 운영 보고</div>
+  <h1 class="t">10월 AS 운영 실적 보고</h1>
+  <p class="lead">당일 처리율 92.8%로 6개월 만에 목표 달성 회복 및 권역별 운영 과제</p>
+  <div class="meta">○○팀 ○○○ 매니저<br>2026. 11.</div>
+</section>
+
+<section class="slide">
+  <div class="tag">01 · 요약</div>
+  <h2 class="t">10월 당일 처리율 92.8% 목표 회복, 재방문율은 5.8%로 개선 필요</h2>
+  <div class="body">
+    <span class="cue">↗ 장을 열면 실적 수치와 최근 12개월 추이가 표시됩니다</span>
+    <div class="kpis">
+      <div class="kpi"><span class="k">AS 처리</span><b class="v" data-v="412906" data-d="0" data-u="건"></b><span class="m"><b>달성</b>전월 대비 +4.0%</span><div class="spark" data-trend="366352,370413,368467,380216,385386,377251,391800,387537,387974,364326,397105,412906"></div></div>
+      <div class="kpi"><span class="k">당일 처리율</span><b class="v" data-v="92.8" data-d="1" data-u="%"></b><span class="m"><b>달성</b>목표 92.0% 이상</span><div class="spark" data-trend="92.2,92.6,92.0,92.9,92.4,93.0,91.0,89.2,90.4,87.7,91.6,92.8"></div></div>
+      <div class="kpi"><span class="k">평균 출동 시간</span><b class="v" data-v="2.5" data-d="1" data-u="시간"></b><span class="m"><b>달성</b>목표 3.0시간 이하</span><div class="spark" data-trend="2.9,2.8,2.9,2.7,2.7,2.7,2.8,3.0,3.1,3.6,2.7,2.5"></div></div>
+      <div class="kpi ng"><span class="k">재방문율</span><b class="v" data-v="5.8" data-d="1" data-u="%"></b><span class="m"><b>미달</b>목표 5.0% 이하</span><div class="spark" data-trend="5.1,5.0,5.1,5.0,5.3,5.4,5.1,5.5,5.7,6.1,5.9,5.8"></div></div>
+    </div>
+    <p class="src">출처: 운영 시스템(가상 실적), 2026. 10. 기준</p>
+  </div>
+  <aside class="note">10월 AS 처리는 41.3만 건으로 연중 최대치를 기록했고 당일 처리율도 92.8%로 회복되었습니다. 다만 재방문율은 5.8%로 여전히 5.0% 기준을 초과하고 있습니다.</aside>
+</section>
+
+<section class="slide">
+  <div class="tag">02 · 월별 추이</div>
+  <h2 class="t">여름철 기상 악화 이후 10월 처리량 41.3만 건으로 연중 최고치 달성</h2>
+  <div class="body">
+    <span class="cue">↗ 막대에 마우스를 올리면 해당 월의 주요 운영 현황이 표시됩니다</span>
+    <div class="cols">
+      <div class="chart" id="c_month"></div>
+      <div class="side"><h3>월별 운영 특징</h3><div class="big">8월 저점 이후 2개월 연속 회복세</div><p>장마·폭우 영향으로 8월 36.4만 건까지 감소했던 처리량이 10월 412,906건으로 최고치를 달성했습니다.</p></div>
+    </div>
+    <p class="src">출처: 운영 시스템(가상 실적), 2026. 10. 기준</p>
+  </div>
+  <aside class="note">8월 태풍 및 기상 악화로 지연되었던 물량이 9월과 10월 현장 정상화를 통해 빠르게 소진되었습니다.</aside>
+</section>
+
+<section class="slide">
+  <div class="tag">03 · 당일 처리율 추이</div>
+  <h2 class="t">당일 처리율 8월 87.7% 저점 이후 10월 92.8%로 목표 초과 달성</h2>
+  <div class="body">
+    <span class="cue">↗ 추이선의 각 지점에 마우스를 올리면 상세 수치가 나타납니다</span>
+    <div class="cols">
+      <div class="chart" id="c_rate"></div>
+      <div class="side"><h3>핵심 분석</h3><div class="big">5~9월 5개월간의 미달 구간 종료</div><p>하절기 집중호우 및 장마로 87.7%까지 급락했던 당일 처리율이 10월 들어 92.8%로 목표선(92.0%)을 상회했습니다.</p></div>
+    </div>
+    <p class="src">출처: 운영 시스템(가상 실적), 2026. 10. 기준</p>
+  </div>
+  <aside class="note">빨간 점선(목표 92%)을 기준으로 5월부터 이어진 미달 흐름이 10월 현장 효율 개선으로 반등했습니다.</aside>
+</section>
+
+<section class="slide">
+  <div class="tag">04 · 권역 비교</div>
+  <h2 class="t">6개 권역 중 경기 남부만 89.7%로 유일하게 목표 미달</h2>
+  <div class="body">
+    <span class="cue">↗ 버튼으로 기간별 비교를 전환하고 경기 남부 막대를 클릭하여 센터별 상세를 확인하세요</span>
+    <div class="cols">
+      <div class="chart" id="c_region"></div>
+      <div class="side"><h3>권역별 진단</h3><div class="big">화성·평택 센터의 업무 과부하 집중</div><p>경기 남부 센터 중 화성(84.1%)과 평택(85.9%)의 기사 1인당 처리량이 380건을 상회하여 인력 재배치가 시급합니다.</p></div>
+    </div>
+    <p class="src">출처: 운영 시스템(가상 실적), 2026. 10. 기준</p>
+  </div>
+  <aside class="note">서울 강남(94.3%)과 서울 강북(94.2%)은 우수한 반면 경기 남부는 89.7%에 머물렀습니다. 화성과 평택 센터의 과부하가 주요 원인입니다.</aside>
+</section>
+
+<section class="slide">
+  <div class="tag">05 · 재방문 원인</div>
+  <h2 class="t">재방문 건수의 65.6%가 공유기 불량 및 실내 배선 노후에 집중</h2>
+  <div class="body">
+    <span class="cue">↗ 항목을 클릭하면 해당 원인에 대한 상세 원인과 부서별 개선 조치가 우측에 표시됩니다</span>
+    <div class="cols">
+      <div class="chart" id="c_cause"></div>
+      <div class="side" id="p_cause"></div>
+    </div>
+    <p class="src">출처: 운영 시스템(가상 실적), 2026. 10. 기준</p>
+  </div>
+  <aside class="note">10월 재방문 23,934건 중 상위 2개 원인이 약 15,695건을 차지합니다. 첫 방문 시 철저한 표준 점검으로 사전 차단이 가능합니다.</aside>
+</section>
+
+<section class="slide">
+  <div class="tag">06 · 향후 추진 과제</div>
+  <h2 class="t">11월 경기 남부 인력 보강 및 재방문율 5.0% 이하 달성 추진</h2>
+  <div class="body">
+    <div class="cards">
+      <div class="card"><span class="no">01</span><h3>경기 남부 인력 재배치</h3><p>화성·평택 센터 기사 1인당 380건 초과 과부하 해소 및 인력 지원<br>○○팀 · 11월 2주차</p></div>
+      <div class="card"><span class="no">02</span><h3>첫 방문 표준 점검표 강화</h3><p>공유기 상태 및 신호 측정 3대 필수 항목 추가, 재부팅 종결 제한<br>기술지원팀 · 11월 3주차</p></div>
+      <div class="card"><span class="no">03</span><h3>노후 배선 교체 체계 수립</h3><p>구축 주거지역 배선 노후 기준 미달 시 개보수 공사 연계 표준화<br>현장운영팀 · 12월 중</p></div>
+    </div>
+    <p class="src">○○팀 11월 중점 실행 계획</p>
+  </div>
+  <aside class="note">기사 부담 경감과 첫 방문 품질 강화를 투트랙으로 진행하여 재방문율을 5.0% 이내로 안정화하겠습니다.</aside>
+</section>
+
+<section class="slide end">
+  <h2 class="t">감사합니다</h2>
+  <p class="lead">문의: ○○팀 ○○○ 매니저</p>
+</section>
+
+<!-- ▲▲▲ [AI 작성 2] 끝 ▲▲▲ -->
+</div>
+
+<!-- ▼▼▼ [AI 작성 3] 그래프 데이터 ▼▼▼ -->
+<script>
+var CHARTS = {
+  c_month: {
+    type: "bar", unit: "건",
+    labels: ["25.11","25.12","26.01","26.02","26.03","26.04","26.05","26.06","26.07","26.08","26.09","26.10"],
+    values: [366352,370413,368467,380216,385386,377251,391800,387537,387974,364326,397105,412906],
+    notes: [
+      "당일 처리율 92.2% · 정상 운영",
+      "당일 처리율 92.6% · 동절기 대응",
+      "당일 처리율 92.0% · 목표 달성",
+      "당일 처리율 92.9% · 이사철 수요 증가",
+      "당일 처리율 92.4% · 설치 및 AS 증가",
+      "당일 처리율 93.0% · 안정적 처리",
+      "당일 처리율 91.0% · 초기 미달 발생",
+      "당일 처리율 89.2% · 장마철 출동 지연",
+      "당일 처리율 90.4% · 집중호우 영향",
+      "당일 처리율 87.7% · 태풍 영향 출동 차질",
+      "당일 처리율 91.6% · 지연 물량 회복세",
+      "당일 처리율 92.8% · 6개월 만에 목표 달성"
+    ],
+    hi: [11], dark: [9], min: 300000
+  },
+  c_rate: {
+    type: "line", unit: "%", digits: 1, target: 92,
+    labels: ["25.11","25.12","26.01","26.02","26.03","26.04","26.05","26.06","26.07","26.08","26.09","26.10"],
+    lines: [
+      { name: "당일 처리율", values: [92.2,92.6,92.0,92.9,92.4,93.0,91.0,89.2,90.4,87.7,91.6,92.8], hi: true }
+    ],
+    notes: [
+      "목표 달성 (92.2%)",
+      "목표 달성 (92.6%)",
+      "목표 달성 (92.0%)",
+      "목표 달성 (92.9%)",
+      "목표 달성 (92.4%)",
+      "목표 달성 (93.0%)",
+      "목표 미달 (91.0%)",
+      "장마철 미달 심화 (89.2%)",
+      "집중호우 미달 (90.4%)",
+      "연중 최저점 기록 (87.7%)",
+      "회복세 진입 (91.6%)",
+      "목표 달성 복귀 (92.8%)"
+    ],
+    min: 85, max: 96
+  },
+  c_region: {
+    type: "bar", dir: "h", unit: "%", digits: 1, target: 92, below: true, min: 85, max: 96,
+    labels: ["서울 강남","서울 강북","인천·부천","경기 북부","강원","경기 남부"],
+    series: {
+      "10월": [94.3, 94.2, 93.8, 93.5, 93.0, 89.7],
+      "3분기 평균": [91.8, 91.4, 91.1, 90.2, 90.1, 86.8],
+      "전월(9월)": [93.5, 92.8, 92.8, 91.7, 91.8, 88.6]
+    },
+    drill: {
+      "경기 남부": {
+        labels: ["수원","안산","용인","오산","평택","화성"],
+        values: [93.4, 92.8, 92.6, 92.2, 85.9, 84.1],
+        notes: [
+          "기사 66명 · 인당 처리 318.1건 (달성)",
+          "기사 48명 · 인당 처리 323.0건 (달성)",
+          "기사 56명 · 인당 처리 330.6건 (달성)",
+          "기사 26명 · 인당 처리 327.3건 (달성)",
+          "기사 41명 · 인당 처리 392.7건 (미달·과부하)",
+          "기사 63명 · 인당 처리 386.6건 (미달·과부하)"
+        ]
+      }
+    }
+  },
+  c_cause: {
+    type: "bar", dir: "h", unit: "건", panel: "p_cause", focus: 0,
+    labels: ["공유기 불량·설정","실내 배선 노후","셋톱박스 오류","고객 기기 설정","기타(외부 요인)"],
+    values: [8318, 7377, 3921, 2965, 1353], hi: [0, 1],
+    details: [
+      {
+        "무슨 일이": "첫 방문 점검 시 공유기 교체 없이 단순 재부팅 처리로 2주 이내 재고장 빈발 (비중 34.8%)",
+        "조치": "첫 방문 필수 점검표에 공유기 3대 진단 항목 추가 및 교체 기준 강화",
+        "담당 · 일정": "기술지원팀 · 11월 3주차"
+      },
+      {
+        "무슨 일이": "구축 아파트 및 노후 주거지역 옥내 인입선 노후화로 신호 감쇄 발생 (비중 30.8%)",
+        "조치": "신호 세기 측정값 등록 의무화 및 기준 미달 배선 즉시 교체 공사 연계",
+        "담당 · 일정": "현장운영팀 · 12월 중"
+      },
+      {
+        "무슨 일이": "구형 셋톱박스 펌웨어 오류 및 특정 채널 끊김 현상 (비중 16.4%)",
+        "조치": "원격 펌웨어 일괄 패치 적용 및 노후 단말 선제 교체",
+        "담당 · 일정": "IPTV운영팀 · 11월 4주차"
+      },
+      {
+        "무슨 일이": "고객 Wi-Fi 비밀번호 분실 및 입력 오류로 인한 단순 출동 요청 (비중 12.4%)",
+        "조치": "방문 완료 후 자가 설정 가이드 알림톡 자동 발송 시스템 도입",
+        "담당 · 일정": "고객지원팀 · 11월 말"
+      },
+      {
+        "무슨 일이": "한국전력 정전, 도로 공사 중 광케이블 단선 등 외부 요인 (비중 5.7%)",
+        "조치": "외부 장애 발생 시 관제 알림 연동 및 별도 원인 분류 관리",
+        "담당 · 일정": "운영기획팀 · 11월 중"
+      }
+    ]
+  }
+};
+</script>
+<!-- ▲▲▲ [AI 작성 3] 끝 ▲▲▲ -->
+
+<!-- [고정] 넘기기 script 시작 -->
+<script>
+var root = document.documentElement;
+root.classList.add("js");
+var META = window.META || {};
+var SLIDES = [].slice.call(document.querySelectorAll(".slide"));
+var cur = 0;
+document.title = META.title || document.title;
+
+SLIDES.forEach(function (s, i) {
+  s.insertAdjacentHTML("afterbegin",
+    '<header class="hd"><b>홈앤서비스</b><span class="badge"></span></header>' +
+    '<footer class="ft"><span>© HOME&amp;SERVICE CO., LTD.</span><span class="fc"></span><span class="fr"></span></footer>');
+  s.querySelector(".badge").textContent = META.badge || "사내한정";
+  s.querySelector(".fc").textContent = [META.dept, META.title, META.date].filter(Boolean).join(" · ");
+  s.querySelector(".fr").textContent = (i + 1) + " / " + SLIDES.length;
+});
+
+[].slice.call(document.querySelectorAll(".kpi .v")).forEach(function (v) {
+  var n = Number(v.getAttribute("data-v"));
+  var d = Number(v.getAttribute("data-d") || 0);
+  v.innerHTML = n.toLocaleString("ko-KR", { minimumFractionDigits: d, maximumFractionDigits: d }) + "<small>" + (v.getAttribute("data-u") || "") + "</small>";
+});
+
+function fit() {
+  root.style.setProperty("--s", Math.min(innerWidth / 1920, innerHeight / 1080));
+}
+function go(i) {
+  cur = Math.max(0, Math.min(SLIDES.length - 1, i));
+  SLIDES.forEach(function (s, k) { s.classList.toggle("on", k === cur); });
+  if (window.drawSlide) window.drawSlide(SLIDES[cur]);
+}
+function full() {
+  if (document.fullscreenElement) document.exitFullscreen();
+  else root.requestFullscreen();
+}
+
+addEventListener("resize", function () { fit(); go(cur); });
+addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); go(cur + 1); }
+  if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); go(cur - 1); }
+  if (e.key === "f" || e.key === "F") full();
+  if (e.key === "n" || e.key === "N") root.classList.toggle("notes");
+});
+var touchX = null;
+addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; });
+addEventListener("touchend", function (e) {
+  var dx = e.changedTouches[0].clientX - touchX;
+  if (Math.abs(dx) > 60) go(cur + (dx < 0 ? 1 : -1));
+});
+document.getElementById("pv").onclick = function () { go(cur - 1); };
+document.getElementById("nx").onclick = function () { go(cur + 1); };
+document.getElementById("fs").onclick = full;
+document.getElementById("nt").onclick = function () { root.classList.toggle("notes"); };
+addEventListener("load", function () {
+  if (!window.drawSlide) {
+    var box = document.getElementById("err");
+    box.textContent = "그래프 코드가 손상되어 그래프가 보이지 않습니다. AI에게 '골격의 고정 부분을 그대로 넣어 전체 HTML을 다시 줘'라고 요청하세요.";
+    box.style.display = "block";
+  }
+});
+fit();
+go(0);
+</script>
+<!-- [고정] 넘기기 script 끝 -->
+
+<!-- [고정] 그래프 script 시작 -->
+<script>
+(function () {
+  var C = window.CHARTS || {};
+  var NS = "http://www.w3.org/2000/svg";
+  var RED = "#EA002C", INK = "#1A1A1A", GRAY = "#C5CAD1", SUB = "#5F6368";
+  var tip = document.getElementById("tip");
+  var problems = [];
+
+  function fmt(v, d) {
+    return Number(v).toLocaleString("ko-KR", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
+  }
+  function el(tag, attrs, parent) {
+    var n = document.createElementNS(NS, tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    parent.appendChild(n);
+    return n;
+  }
+  function label(parent, x, y, str, size, color, anchor, cls) {
+    var t = el("text", { x: x, y: y, "font-size": size, fill: color, "text-anchor": anchor }, parent);
+    if (cls) t.setAttribute("class", cls);
+    t.textContent = str;
+    return t;
+  }
+  function scale(lo, hi) {
+    var raw = (hi - lo || 1) / 4;
+    var mag = Math.pow(10, Math.floor(Math.log(raw) / Math.LN10));
+    var f = raw / mag;
+    var step = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * mag;
+    return { lo: Math.floor(lo / step) * step, hi: Math.ceil(hi / step) * step, step: step };
+  }
+  function tipOn(e, html) {
+    tip.innerHTML = html;
+    tip.style.display = "block";
+    tip.style.left = Math.min(e.clientX + 16, innerWidth - tip.offsetWidth - 8) + "px";
+    tip.style.top = Math.min(e.clientY + 16, innerHeight - tip.offsetHeight - 8) + "px";
+  }
+  function tipOff() { tip.style.display = "none"; }
+  function check(id, labels, values) {
+    if (!labels || !values || labels.length !== values.length) {
+      problems.push(id + ": 항목 이름(labels)과 숫자(values) 개수가 다릅니다");
+    }
+  }
+  function report() {
+    var box = document.getElementById("err");
+    if (problems.length) { box.textContent = "데이터 확인 필요 — " + problems.join(" / "); box.style.display = "block"; }
+  }
+
+  function bar(box, c, id) {
+    var tab = c.series ? Object.keys(c.series)[0] : null;
+    var drill = null;
+    var focus = c.focus == null ? -1 : c.focus;
+    box.innerHTML = '<div class="ctool"></div><div class="cwrap"></div>';
+    var tool = box.firstChild, wrap = box.lastChild;
+
+    function current() {
+      if (drill) return c.drill[drill];
+      return { labels: c.labels, values: tab ? c.series[tab] : c.values, notes: c.notes, details: c.details, hi: c.hi };
+    }
+    function buttons() {
+      tool.innerHTML = "";
+      var names = drill ? ["← 전체로"] : (c.series ? Object.keys(c.series) : []);
+      names.forEach(function (name) {
+        var b = document.createElement("button");
+        b.textContent = name;
+        if (name === tab && !drill) b.className = "on";
+        b.onclick = function () { if (drill) drill = null; else tab = name; focus = -1; render(); };
+        tool.appendChild(b);
+      });
+      if (drill) tool.insertAdjacentHTML("beforeend", "<b>" + drill + "</b>");
+      tool.style.display = names.length ? "" : "none";
+    }
+    function panel(d) {
+      var p = c.panel && document.getElementById(c.panel);
+      if (!p) return;
+      p.innerHTML = "";
+      if (focus < 0) return;
+      p.insertAdjacentHTML("beforeend", "<h3>" + d.labels[focus] + "</h3><div class='big'>" + fmt(d.values[focus], c.digits) + (c.unit || "") + "</div>");
+      var det = (d.details || [])[focus] || {};
+      for (var k in det) p.insertAdjacentHTML("beforeend", "<div class='box'><i>" + k + "</i>" + det[k] + "</div>");
+    }
+    function render() {
+      buttons();
+      var d = current();
+      check(id, d.labels, d.values);
+      var W = wrap.clientWidth, H = wrap.clientHeight;
+      wrap.innerHTML = "";
+      if (!W || !H) return;
+      var svg = el("svg", { width: W, height: H }, wrap);
+      var horiz = c.dir === "h";
+      var vals = d.values.map(Number);
+      var top = Math.max.apply(null, vals.concat([0, c.target || 0])) * 1.08;
+      var s = scale(c.min != null ? c.min : Math.min.apply(null, vals.concat([0])), c.max != null ? c.max : top);
+      var lo = c.min != null ? c.min : s.lo, hi = c.max != null ? c.max : s.hi;
+      var L = horiz ? 200 : 90, R = horiz ? 110 : 24, T = horiz ? 10 : 36, B = horiz ? 36 : 56;
+      var iw = W - L - R, ih = H - T - B;
+      var band = (horiz ? ih : iw) / vals.length;
+      var thick = Math.min(band * 0.62, horiz ? 52 : 110);
+      function pos(v) { return (Math.max(lo, Math.min(hi, v)) - lo) / (hi - lo); }
+
+      for (var g = Math.ceil(lo / s.step) * s.step; g <= hi + 1e-9; g += s.step) {
+        var gd = s.step < 1 ? 1 : 0;
+        if (horiz) { var gx = L + iw * pos(g); el("line", { x1: gx, x2: gx, y1: T, y2: T + ih, stroke: "#EEF0F2" }, svg); label(svg, gx, H - 8, fmt(g, gd), 15, SUB, "middle"); }
+        else { var gy = T + ih * (1 - pos(g)); el("line", { x1: L, x2: L + iw, y1: gy, y2: gy, stroke: "#EEF0F2" }, svg); label(svg, L - 12, gy + 5, fmt(g, gd), 15, SUB, "end"); }
+      }
+
+      var rects = [];
+      vals.forEach(function (v, i) {
+        var red = (d.hi || []).indexOf(i) >= 0 || (c.below && c.target != null && v < c.target);
+        var color = red ? RED : ((c.dark || []).indexOf(i) >= 0 && !drill ? INK : GRAY);
+        var len = pos(v) - pos(Math.max(lo, 0));
+        var r, txt;
+        if (horiz) {
+          var cy = T + band * i + band / 2;
+          r = el("rect", { x: L + iw * pos(Math.max(lo, 0)), y: cy - thick / 2, width: Math.max(1, iw * len), height: thick, fill: color, rx: 3, "class": "grow-x" }, svg);
+          label(svg, L - 14, cy + 6, d.labels[i], 20, INK, "end");
+          txt = label(svg, L + iw * pos(v) + 10, cy + 6, fmt(v, c.digits) + (c.unit || ""), 18, red ? RED : INK, "start", "fade");
+        } else {
+          var cx = L + band * i + band / 2;
+          r = el("rect", { x: cx - thick / 2, y: T + ih * (1 - pos(v)), width: thick, height: Math.max(1, ih * len), fill: color, rx: 3, "class": "grow-y" }, svg);
+          label(svg, cx, H - B + 28, d.labels[i], vals.length > 8 ? 15 : 18, INK, "middle");
+          txt = label(svg, cx, T + ih * (1 - pos(v)) - 10, fmt(v, c.digits) + (c.unit || ""), vals.length > 8 ? 15 : 18, red ? RED : INK, "middle", "fade");
+        }
+        txt.setAttribute("font-weight", 700);
+        r.style.cursor = "pointer";
+        r.style.animationDelay = (i * 0.04) + "s";
+        r.onmousemove = function (e) {
+          var note = (d.notes || [])[i];
+          var canDrill = !drill && c.drill && c.drill[d.labels[i]];
+          tipOn(e, "<b>" + d.labels[i] + "</b><br>" + fmt(v, c.digits) + (c.unit || "") + (note ? "<br>" + note : "") + (canDrill ? "<br>누르면 세부 항목으로" : ""));
+        };
+        r.onmouseleave = tipOff;
+        r.onclick = function () {
+          tipOff();
+          if (!drill && c.drill && c.drill[d.labels[i]]) { drill = d.labels[i]; focus = -1; render(); return; }
+          focus = focus === i ? -1 : i;
+          shade();
+          panel(d);
+        };
+        rects.push([r, txt]);
+      });
+
+      if (c.target != null) {
+        if (horiz) { var tx = L + iw * pos(c.target); el("line", { x1: tx, x2: tx, y1: T, y2: T + ih, stroke: RED, "stroke-dasharray": "6 5", "stroke-width": 2 }, svg); label(svg, tx + 6, T + 14, "목표 " + fmt(c.target, c.digits) + (c.unit || ""), 15, RED, "start"); }
+        else { var ty = T + ih * (1 - pos(c.target)); el("line", { x1: L, x2: L + iw, y1: ty, y2: ty, stroke: RED, "stroke-dasharray": "6 5", "stroke-width": 2 }, svg); label(svg, L + iw, ty - 8, "목표 " + fmt(c.target, c.digits) + (c.unit || ""), 15, RED, "end"); }
+      }
+      function shade() {
+        rects.forEach(function (pair, i) {
+          var off = focus >= 0 && focus !== i;
+          pair[0].classList.toggle("dim", off);
+          pair[1].classList.toggle("dim", off);
+        });
+      }
+      shade();
+      panel(d);
+    }
+    render();
+  }
+
+  function line(box, c, id) {
+    box.innerHTML = '<div class="cwrap"></div>';
+    var wrap = box.firstChild;
+    var W = wrap.clientWidth, H = wrap.clientHeight;
+    if (!W || !H) return;
+    var svg = el("svg", { width: W, height: H }, wrap);
+    var all = [];
+    c.lines.forEach(function (ln) { check(id + " " + (ln.name || ""), c.labels, ln.values); all = all.concat(ln.values.map(Number)); });
+    if (c.target != null) all.push(c.target);
+    var mn = Math.min.apply(null, all), mx = Math.max.apply(null, all), pad = (mx - mn || 1) * 0.12;
+    var s = scale(mn - pad, mx + pad);
+    var lo = c.min != null ? c.min : s.lo, hi = c.max != null ? c.max : s.hi;
+    var L = 80, R = 40, T = c.lines.length > 1 ? 56 : 30, B = 56, iw = W - L - R, ih = H - T - B, n = c.labels.length;
+    function X(i) { return L + (n < 2 ? iw / 2 : iw * i / (n - 1)); }
+    function Y(v) { return T + ih * (1 - (v - lo) / (hi - lo)); }
+
+    for (var g = Math.ceil(lo / s.step) * s.step; g <= hi + 1e-9; g += s.step) {
+      el("line", { x1: L, x2: L + iw, y1: Y(g), y2: Y(g), stroke: "#EEF0F2" }, svg);
+      label(svg, L - 12, Y(g) + 5, fmt(g, s.step < 1 ? 1 : 0), 15, SUB, "end");
+    }
+    c.labels.forEach(function (lb, i) { label(svg, X(i), H - B + 28, lb, 16, INK, "middle"); });
+    if (c.target != null) {
+      el("line", { x1: L, x2: L + iw, y1: Y(c.target), y2: Y(c.target), stroke: RED, "stroke-dasharray": "6 5", "stroke-width": 2 }, svg);
+      label(svg, L + 6, Y(c.target) + 22, "목표 " + fmt(c.target, c.digits) + (c.unit || ""), 15, RED, "start");
+    }
+    c.lines.forEach(function (ln, li) {
+      var color = ln.hi ? RED : [INK, "#9AA0A6", GRAY][Math.min(li, 2)];
+      var dpath = ln.values.map(function (v, i) { return (i ? "L" : "M") + X(i) + " " + Y(v); }).join(" ");
+      el("path", { d: dpath, fill: "none", stroke: color, "stroke-width": li === 0 ? 4 : 3, pathLength: 1, "class": "draw" }, svg);
+      ln.values.forEach(function (v, i) {
+        var last = i === n - 1;
+        var dot = el("circle", { cx: X(i), cy: Y(v), r: last ? 8 : 5, fill: "#fff", stroke: color, "stroke-width": 3 }, svg);
+        dot.style.cursor = "pointer";
+        dot.onmousemove = function (e) { tipOn(e, "<b>" + c.labels[i] + "</b><br>" + (ln.name || "") + " " + fmt(v, c.digits) + (c.unit || "") + ((c.notes || [])[i] ? "<br>" + c.notes[i] : "")); };
+        dot.onmouseleave = tipOff;
+        if (last && li === 0) label(svg, X(i), Y(v) - 16, fmt(v, c.digits) + (c.unit || ""), 18, color, "middle", "fade").setAttribute("font-weight", 700);
+      });
+      if (c.lines.length > 1) {
+        el("rect", { x: L + li * 220, y: 8, width: 28, height: 6, fill: color }, svg);
+        label(svg, L + li * 220 + 38, 17, ln.name || "", 17, INK, "start");
+      }
+    });
+  }
+
+  function spark(box) {
+    var vals = (box.getAttribute("data-trend") || "").split(",").map(Number);
+    var W = box.clientWidth, H = box.clientHeight;
+    if (vals.length < 2 || !W) return;
+    box.innerHTML = "";
+    var mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals);
+    var svg = el("svg", { width: W, height: H }, box);
+    var dpath = vals.map(function (v, i) { return (i ? "L" : "M") + (4 + (W - 8) * i / (vals.length - 1)) + " " + (6 + (H - 12) * (1 - (v - mn) / (mx - mn || 1))); }).join(" ");
+    el("path", { d: dpath, fill: "none", stroke: box.closest(".ng") ? RED : INK, "stroke-width": 3, pathLength: 1, "class": "draw" }, svg);
+  }
+
+  function countUp(v) {
+    var to = Number(v.getAttribute("data-v")), d = Number(v.getAttribute("data-d") || 0), u = v.getAttribute("data-u") || "";
+    var start = null;
+    function step(t) {
+      if (!start) start = t;
+      var k = Math.min(1, (t - start) / 900);
+      v.innerHTML = fmt(to * (1 - Math.pow(1 - k, 3)), d) + "<small>" + u + "</small>";
+      if (k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  window.drawSlide = function (slide) {
+    problems = [];
+    [].slice.call(slide.querySelectorAll(".chart")).forEach(function (box) {
+      var c = C[box.id];
+      if (!c) { problems.push(box.id + ": 그래프 데이터가 없습니다"); box.textContent = "그래프 데이터 없음: " + box.id; return; }
+      try { (c.type === "line" ? line : bar)(box, c, box.id); }
+      catch (e) { problems.push(box.id + ": 그래프를 그리지 못했습니다"); box.textContent = "그래프 오류: " + box.id; }
+    });
+    [].slice.call(slide.querySelectorAll(".spark")).forEach(spark);
+    [].slice.call(slide.querySelectorAll(".kpi .v")).forEach(countUp);
+    report();
+  };
+  var all = [].slice.call(document.querySelectorAll(".slide"));
+  addEventListener("beforeprint", function () { all.forEach(function (s) { s.classList.add("on"); window.drawSlide(s); }); });
+  addEventListener("afterprint", function () { if (typeof go === "function") go(cur); });
+  if (typeof go === "function") go(cur);
+  else {
+    all.forEach(window.drawSlide);
+    var box = document.getElementById("err");
+    box.textContent = "넘기기 코드가 손상되어 슬라이드가 세로로 이어져 보입니다. 아래로 내려 보거나, AI에게 전체 HTML을 다시 요청하세요.";
+    box.style.display = "block";
+  }
+})();
+</script>
+<!-- [고정] 그래프 script 끝 -->
+</body>
+</html>
