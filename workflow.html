@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="워크플로는 정해진 순서대로 일하는 비서입니다."><title>매번 같은 순서로 하는 일,
+워크플로로 맡기기 · Gemini Enterprise 실무 활용</title>
+
+<style>:root{--ink:#172d35;--muted:#586970;--accent:#00796d;--line:#dce6e6;--soft:#f2f7f6;--cream:#faf8f3;--radius:16px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:#fff;color:var(--ink);font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:17px;line-height:1.8;word-break:keep-all}a{color:var(--accent);text-underline-offset:4px}button,input,textarea{font:inherit}button,a,input,textarea{touch-action:manipulation}button{cursor:pointer}:focus-visible{outline:3px solid #148dcb;outline-offset:5px}.skip{position:fixed;top:-100px;left:20px;background:#fff;z-index:20}.skip:focus{top:12px}.site-header{max-width:1200px;margin:auto;padding:25px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:15px;color:var(--ink);text-decoration:none;font-size:14px;font-weight:700}.brand-mark{font-family:Georgia,serif;font-size:24px;border-right:1px solid var(--line);padding-right:17px}.brand-mark span{color:var(--accent)}.brand small{display:block;font-size:10px;letter-spacing:1.5px;color:var(--muted);margin-top:3px}.site-header nav{display:flex;gap:26px;font-size:14px}.site-header nav a{text-decoration:none;color:var(--muted);padding:5px 0}.site-header nav a[aria-current]{color:var(--accent);font-weight:700;border-bottom:2px solid var(--accent)}main{max-width:1200px;margin:auto}.hero{padding:76px 24px 66px;display:grid;grid-template-columns:1.35fr 1fr;gap:74px;align-items:center}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--accent);margin:0 0 17px}h1{font-size:clamp(36px,4.2vw,58px);line-height:1.25;letter-spacing:-2px;margin:0 0 25px;max-width:680px}.lead{color:var(--muted);font-size:19px;line-height:1.85;max-width:580px}.hero-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:27px 0}.hero-meta span+span{border-left:1px solid var(--line);padding-left:12px}.button{display:inline-flex;justify-content:space-between;align-items:center;gap:32px;padding:12px 22px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-size:14px;font-weight:700}.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.hero-aside{background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:34px;position:relative}.hero-aside:before{content:"";display:block;width:42px;height:3px;background:var(--accent);margin-bottom:30px}.hero-aside h2{font-size:27px;line-height:1.4;margin:0 0 14px;letter-spacing:-.8px}.hero-aside p:not(.eyebrow){color:var(--muted);font-size:14px}.mini-flow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:26px 0}.mini-flow span{background:white;border:1px solid var(--line);padding:10px 13px;border-radius:8px;font-size:13px}.mini-flow i{font-style:normal;color:var(--accent)}.aside-note{font-size:12px!important;border-top:1px solid var(--line);padding-top:18px;margin-bottom:0}.section-nav-wrap{position:sticky;top:0;background:rgba(255,255,255,.97);z-index:10;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-nav{display:flex;justify-content:space-between;padding:16px 24px;gap:16px}.section-nav a{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap}.section-nav span{color:var(--accent);font-size:10px;margin-right:9px}.section-nav a.active{color:var(--accent);font-weight:700}.content-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:60px;padding:65px 24px 80px}.margin-note{align-self:start;position:sticky;top:100px;color:var(--muted);font-size:13px}.margin-note small{display:block;font-size:11px;line-height:1.8;margin-top:24px}.print-button{border:1px solid var(--line);background:white;color:var(--muted);border-radius:7px;padding:7px 12px;font-size:12px}.manuscript{min-width:0}.chapter{padding-bottom:58px;margin-bottom:54px;border-bottom:1px solid var(--line);scroll-margin-top:90px}.chapter:last-child{margin-bottom:0}.chapter h2{font-size:31px;line-height:1.45;letter-spacing:-1px;margin:8px 0 20px}.chapter h3{font-size:21px;line-height:1.6;letter-spacing:-.4px;margin:28px 0 14px}.chapter p{margin:14px 0}.section-kicker{color:var(--accent);font-size:12px;letter-spacing:1px;font-weight:700}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:25px 0}.card{border:1px solid var(--line);padding:24px;border-radius:var(--radius)}.card .number{color:var(--accent);font-family:Georgia,serif;font-size:29px}.card h3{margin:12px 0 9px;font-size:19px}.card p{font-size:14px;color:var(--muted);line-height:1.8}.card a{font-size:14px;font-weight:700}.schedule{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:28px 0}.schedule>div{padding:21px;background:var(--soft);border-right:1px solid var(--line)}.schedule>div:last-child{border:0}.schedule strong{display:block;font-size:25px;color:var(--accent)}.schedule p{font-size:13px;line-height:1.7}.callout{background:var(--cream);border-left:3px solid #b39757;padding:19px 24px;border-radius:0 10px 10px 0;font-size:14px;margin:25px 0}.callout.info{background:var(--soft);border-color:var(--accent)}.step{border-top:1px solid var(--line);padding:25px 0}.step-heading{display:flex;gap:15px;align-items:baseline}.step-heading span{font-size:12px;color:var(--accent);font-weight:700}.step h3{margin:0 0 16px}.step dl{display:grid;grid-template-columns:95px 1fr;gap:11px 18px;font-size:15px;margin:10px 0}.step dt{font-weight:700;color:var(--muted)}.step dd{margin:0}.prompt-box{border:1px solid #c6ded9;background:#f3f8f6;border-radius:12px;overflow:hidden;margin:18px 0}.prompt-head{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-bottom:1px solid #d8e8e3;font-size:12px;font-weight:700;color:var(--accent)}.copy-button,.note-copy{border:1px solid #c5d8d4;background:white;border-radius:6px;padding:5px 12px;font-size:12px;color:var(--accent)}pre{white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:18px;font-family:inherit;font-size:15px;line-height:1.8}code{overflow-wrap:anywhere}details{border:1px solid var(--line);border-radius:10px;padding:14px 20px;margin:14px 0;font-size:15px}summary{font-weight:700;cursor:pointer}.checklist{display:grid;gap:10px;background:var(--soft);padding:22px;border-radius:12px;margin:20px 0}.checklist label{display:flex;align-items:flex-start;gap:12px;font-size:15px;cursor:pointer}.checklist input{width:18px;height:18px;flex-shrink:0;margin-top:5px;accent-color:var(--accent)}.checklist label:has(input:checked){color:#52746d}.choice-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:23px 0 0}.choice-tabs button{border:1px solid var(--line);border-radius:8px;background:white;padding:8px 15px;font-size:14px;color:var(--muted)}.choice-tabs button[aria-selected=true]{background:var(--accent);color:white;border-color:var(--accent)}.choice-panel{background:var(--soft);border-radius:12px;padding:20px 24px;margin-top:12px;font-size:15px}.choice-panel[hidden]{display:none}.worksheet{margin:24px 0}.worksheet label{display:block;font-size:14px;font-weight:700;margin:18px 0 8px}.worksheet textarea{width:100%;min-height:80px;resize:vertical;border:1px solid var(--line);border-radius:9px;padding:13px;color:var(--ink);font-size:15px;line-height:1.7}.worksheet textarea:focus{border-color:var(--accent)}.note-tools{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:12px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;margin:24px 0}th{text-align:left;background:var(--soft);padding:12px;border-bottom:1px solid var(--line)}td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}figure{margin:28px 0}figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:12px}figcaption{color:var(--muted);font-size:12px;margin-top:8px}.download-row{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.week-list{margin:25px 0}.week-row{display:flex;align-items:center;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}.week-row .week-num{font-family:Georgia,serif;color:var(--accent);font-size:28px;min-width:45px}.week-row>div{flex:1}.week-row h3{font-size:19px;margin:0}.week-row p{font-size:13px;color:var(--muted);margin:5px 0}.week-row a{font-size:14px;font-weight:700}.tag{font-size:11px;background:var(--soft);color:var(--muted);padding:4px 9px;border-radius:5px}.example-report{border:1px solid var(--line);border-radius:14px;padding:26px;margin:25px 0;background:#fff}.report-top{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.metrics{display:flex;gap:35px;margin:20px 0}.metrics strong{display:block;font-size:28px;color:var(--accent)}.metrics small{font-size:12px;color:var(--muted)}footer{border-top:1px solid var(--line);max-width:1152px;margin:auto;padding:26px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}footer a{font-size:12px}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:9px;font-size:14px;padding:10px 20px;opacity:0;pointer-events:none;z-index:30}.toast.show{opacity:1}.empty-note{font-size:13px;color:var(--muted)}
+@media(max-width:850px){.site-header{align-items:flex-start;flex-direction:column;gap:15px}.site-header nav{gap:24px}.hero{grid-template-columns:1fr;gap:28px;padding-top:45px;padding-bottom:40px}.hero-aside{padding:25px}.content-layout{grid-template-columns:1fr;gap:20px;padding-top:35px}.margin-note{position:static;display:none}.cards{grid-template-columns:1fr}.section-nav{justify-content:flex-start;overflow-x:auto;padding:14px 20px}.schedule>div{padding:16px}.schedule strong{font-size:22px}.chapter h2{font-size:27px}.step dl{grid-template-columns:1fr;gap:3px}.step dd{margin-bottom:10px}.week-row{gap:14px}.week-row h3{font-size:17px}.week-row a{white-space:nowrap}footer{margin:0 24px;flex-wrap:wrap}.hero h1{letter-spacing:-1.3px}.metrics{gap:24px}}
+@media print{.site-header nav,.section-nav-wrap,.margin-note,.copy-button,.note-copy,.print-button,.toast,.choice-tabs,.skip{display:none!important}.site-header{padding:10px 0}.hero{padding:20px 0;gap:20px;grid-template-columns:1.3fr 1fr}h1{font-size:30px}.hero-aside{padding:15px}.content-layout{display:block;padding:20px 0}.chapter{margin-bottom:25px;padding-bottom:20px}.chapter h2{font-size:24px}.choice-panel[hidden]{display:block}details>*{display:block!important}details{break-inside:avoid}.step,.card{break-inside:avoid}body{font-size:12px;line-height:1.65}footer{margin:0}textarea{min-height:55px}.button{color:#172d35;background:#fff}figure img{max-height:650px;object-fit:contain}}
+.figure-compact img{display:block;width:auto;max-width:100%;max-height:360px;margin:0 auto;object-fit:contain}
+@page{size:A4;margin:15mm}
+
+/* Optional grouped course navigation; ordinary link lists remain supported. */
+.site-header nav{align-items:center;flex-wrap:wrap}.course-menu{position:relative;margin:0;border:0;padding:0}.course-menu summary{list-style:none;cursor:pointer;padding:5px 0;color:var(--muted);white-space:nowrap}.course-menu summary::-webkit-details-marker{display:none}.course-menu summary.current-group{color:var(--accent);font-weight:700;border-bottom:2px solid var(--accent)}.course-menu summary span{display:inline-block;margin-left:3px;transition:transform .15s}.course-menu[open] summary span{transform:rotate(180deg)}.course-weeks{position:absolute;right:0;top:calc(100% + 10px);z-index:60;width:310px;max-width:calc(100vw - 32px);padding:8px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px #172d351f}.site-header nav .course-weeks a,.nav-unavailable{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 12px;border-radius:7px;font-size:14px}.site-header nav .course-weeks a[aria-current]{border-bottom:0;background:var(--soft)}.site-header nav .course-weeks a:hover{background:var(--soft)}.course-weeks small{font-size:11px;color:var(--muted);font-weight:400;text-align:right}.nav-unavailable{color:#7b8588}.nav-unavailable small{color:#7b8588}.course-menu[open]{overflow:visible}
+@media(max-width:850px){.site-header nav{gap:16px;position:relative;width:100%}.course-menu{position:static}.course-weeks{right:0;top:calc(100% + 10px)}.site-header{position:relative;z-index:10}}
+@media(max-width:360px){.site-header nav{font-size:13px;gap:14px}.course-weeks{right:0;width:280px}}
+</style></head>
+<body data-page="workflow.html"><a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header"><a class="brand" href="index.html"><span>Gemini Enterprise 실무 활용<small>홈앤서비스 STAFF · 실습 교재</small></span></a><nav aria-label="교재"><a href="index.html" >시작</a><a href="security.html" >보안</a><details class="course-menu"><summary class="current-group">실습 <span aria-hidden="true">▾</span></summary><div class="course-weeks"><a href="prompt.html">대화법</a><a href="canvas.html">Canvas</a><a href="deep-research.html">Deep Research</a><a href="notebook.html">Notebook</a><a href="excel.html">엑셀 뽑기</a><a href="skill.html">스킬</a><a href="agent-mine.html">에이전트 ②③</a><a href="agent-slide.html">에이전트 ① (선택)</a><a href="workflow.html" aria-current="page">워크플로 (심화)</a></div></details><a href="wrapup.html" >정리</a><a href="help.html" >막혔을 때</a><a href="reference.html" >참고자료</a></nav></header>
+<main id="main"><section class="hero"><div><p class="eyebrow">심화 · 선택</p><h1>매번 같은 순서로 하는 일,
+워크플로로 맡기기</h1><p class="lead">워크플로는 정해진 순서대로 일하는 비서입니다.</p><div class="hero-meta"><span>2026.11.16 — 12.02</span><span>심화 · 선택 실습</span></div><a class="button primary" href="#s1">만드는 방법 보기 <span aria-hidden="true">↗</span></a></div><aside class="hero-aside"><p class="eyebrow">WORKFLOW</p><h2>정해진 순서대로
+일하는 비서</h2><p>말로 한 번 만들고, 외부 공개 전 점검 워크플로를 단계별로 직접 조립해 봅니다.</p><div class="mini-flow"><span>자료</span><i>→</i><span>만들기</span><i>→</i><span>확인</span></div><p class="aside-note">메뉴가 없으면 관리자가 기능을 켜야 합니다.</p></aside></section>
+<div class="section-nav-wrap"><nav class="section-nav" aria-label="페이지 구간"><a href="#s1"><span>01</span>개요</a><a href="#s2"><span>02</span>들어가는 길</a><a href="#s3"><span>03</span>단계 종류</a><a href="#s4"><span>04</span>말로 만들기</a><a href="#s5"><span>05</span>직접 조립 과제</a><a href="#s6"><span>06</span>트리거</a><a href="#s7"><span>07</span>확인</a></nav></div>
+<div class="content-layout"><aside class="margin-note"><span class="eyebrow">LEARNING GUIDE</span><p>승인 단계에서 멈추면 Runs 탭을 확인합니다.</p><button class="print-button" type="button">인쇄 / PDF</button><small>체크와 메모는 이 브라우저에만 보관됩니다. 중요한 메모는 복사해 별도로 저장하세요.</small></aside><article class="manuscript"><section class="chapter" id="s1"><span class="section-kicker">01</span><h2>개요</h2>
+| | 에이전트 | 워크플로 |
+|---|---|---|
+| 일하는 방식 | 대화하면서 그때그때 판단 | 미리 정한 단계를 차례로 실행 |
+| 사람의 역할 | 계속 대화 | 처음에 입력, 중간에 승인·답변 |
+| 어울리는 일 | 질문·상담·초안 다듬기 | 매번 같은 순서로 하는 반복 업무 |
+<div class="callout">
+<p><strong>🔧 메뉴가 안 보이면</strong></p>
+<p>워크플로 메뉴는 <strong>관리자가 워크플로 기능을 켜야</strong> 보입니다. 메뉴가 없으면 회사 담당자에게 문의하세요. 쓸 수 있는 도구와 데이터도 관리자가 연결해 준 것뿐입니다. 그래서 이 실습은 외부 연결 없이 &quot;입력 → AI → 승인 → AI&quot; 형태로 만듭니다.</p>
+</div>
+</section>
+<section class="chapter" id="s2"><span class="section-kicker">02</span><h2>들어가는 길</h2>
+<p>왼쪽 <strong>+ 새 에이전트</strong> 오른쪽 화살표(&gt;) → <strong>워크플로</strong>. 또는 <strong>에이전트</strong> 화면 오른쪽 위 <strong>+ 새 에이전트</strong> → <strong>워크플로</strong>.</p>
+<figure><img src="assets/captures/new-agent-gallery.png" alt="에이전트 화면 오른쪽 위 새 에이전트 버튼을 누르면 채팅 에이전트와 워크플로가 나온다" loading="lazy"><figcaption>에이전트 화면 → + 새 에이전트 → 워크플로</figcaption></figure>
+<p><strong>워크플로 빌드 시작</strong> 화면이 열립니다. 여기서 세 가지 방법 중 하나를 고릅니다.</p>
+<figure><img src="assets/captures/workflow-start.png" alt="워크플로 빌드 시작 화면에 설명 입력칸, 예시 카드, 아래쪽 템플릿 더보기와 오른쪽 아래 수동 빌드 버튼이 있다" loading="lazy"><figcaption>워크플로 빌드 시작: 입력칸 · 템플릿 더보기 · 수동 빌드</figcaption></figure>
+<table>
+<thead>
+<tr>
+<th>방법</th>
+<th>누르는 곳</th>
+<th>언제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>말로 만들기</td>
+<td>가운데 입력칸에 하고 싶은 일을 문장으로 입력</td>
+<td>처음 만들 때</td>
+</tr>
+<tr>
+<td>템플릿</td>
+<td>아래쪽 <strong>템플릿 더보기</strong></td>
+<td>예시를 보고 싶을 때</td>
+</tr>
+<tr>
+<td>직접 조립</td>
+<td>오른쪽 아래 <strong>수동 빌드</strong> → <strong>단계 추가</strong></td>
+<td>단계를 하나씩 손볼 때</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="chapter" id="s3"><span class="section-kicker">03</span><h2>단계 종류</h2>
+<p><strong>단계 추가</strong>를 누르면 오른쪽에 단계 목록이 나옵니다.</p>
+<figure><img src="assets/captures/workflow-step-menu.png" alt="단계 추가를 누르면 오른쪽에 Gemini Agent, 흐름 제어(조건, 루프, 필터), 인간 참여형, 기존 에이전트가 나온다" loading="lazy"><figcaption>단계 목록: Gemini Agent · 흐름 제어 · 인간 참여형 · 기존 에이전트</figcaption></figure>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>입력란 (필드 추가)</td>
+<td>실행할 때 사람이 채우는 칸. 수동 트리거를 누르면 오른쪽에 나옵니다</td>
+</tr>
+<tr>
+<td>Gemini Agent</td>
+<td>지침대로 읽고 판단해 답하는 AI 단계</td>
+</tr>
+<tr>
+<td>흐름 제어 → 조건 · 루프 · 필터</td>
+<td>조건에 따라 길 나누기 · 목록 1건씩 반복 · 조건에 맞는 것만 남기기</td>
+</tr>
+<tr>
+<td>인간 참여형(Human In The Loop)</td>
+<td>사람이 승인하거나 답해야 다음으로 넘어감</td>
+</tr>
+<tr>
+<td>기존 에이전트</td>
+<td>이미 만든 에이전트에게 일을 넘김</td>
+</tr>
+</tbody>
+</table>
+<p>승인 단계를 넣으면 <strong>Approve(승인)</strong>와 <strong>Reject(반려)</strong> 두 갈래가 생깁니다. 다음 단계는 갈래마다 따로 붙입니다.</p>
+<div class="callout">
+<p><strong>⚠️ 스킬은 단계에서 바로 부르지 않습니다</strong></p>
+<p>워크플로 단계에서 스킬(<code>/performance-report</code> 등)을 부르는 기능은 안내되어 있지 않습니다. 스킬에 넣었던 규칙은 Gemini Agent 단계의 지침에 글로 직접 넣습니다.</p>
+</div>
+</section>
+<section class="chapter" id="s4"><span class="section-kicker">04</span><h2>실습: 실적 보고 초안 워크플로</h2>
+<p><strong>① 만들기.</strong> 워크플로 빌드 시작 화면의 입력칸에 아래를 붙여넣습니다.</p>
+<div class="prompt-box"><div class="prompt-head"><span>워크플로 만들기</span><button class="copy-button" type="button">복사</button></div><pre>실적 보고 초안 워크플로를 만들어줘.&#10;1) 실행할 때 '보고 기간'과 '실적 표(붙여넣기)'를 입력받는다.&#10;2) AI가 목표 대비, 전월 대비, 튀는 값, 원인 후보 순서로 분석한다.&#10;3) 분석 결과를 내가 확인하고 승인한다.&#10;4) 승인하면 팀장 보고용 5줄 요약을 쓴다.&#10;고객 개인정보가 보이면 바로 멈춘다.</pre></div>
+<p><strong>② 확인.</strong> 아래처럼 단계가 만들어집니다. 개인정보 검사와 조건 단계까지 알아서 넣어 주기도 합니다. 다르면 단계를 눌러 고치거나, 왼쪽 입력칸에 &quot;무엇을 바꾸고 싶은지&quot; 말로 적습니다.</p>
+<figure><img src="assets/captures/workflow-example.png" alt="말로 만든 워크플로: 수동 실행, 실적 정보 입력, 개인정보 검사기, 개인정보 검증 조건, 실적 분석기, 분석 결과 승인 검토, Approve 쪽 5줄 요약 보고서 작성기, Reject 쪽 반려 안내 처리기" loading="lazy"><figcaption>말로 만든 예시: 입력 → 개인정보 검사 → 분석 → 승인 → 요약(Approve) / 반려 안내(Reject)</figcaption></figure>
+<p><strong>③ 시험.</strong> 위쪽 <strong>테스트</strong> 탭에서 실습 엑셀의 표(고객 정보 없는 것)로 실행해 봅니다.</p>
+<p><strong>④ 켜기.</strong> 오른쪽 위 <strong>사용 설정</strong>을 누릅니다.</p>
+<p><strong>⑤ 실행.</strong> 채팅창에 <code>@워크플로이름</code>을 입력해 부릅니다.</p>
+</section>
+<section class="chapter" id="s5"><span class="section-kicker">05</span><h2>과제: 직접 조립하기 — 외부 공개 전 점검</h2>
+<p>이번에는 말로 만들지 않고 <strong>단계를 하나씩 직접 넣어</strong> 봅니다. 보도자료·홍보 글·고객 안내문처럼 밖으로 나가는 글에 들어가면 안 되는 정보가 있는지 점검하고, <strong>그 부분만</strong> 고치는 워크플로입니다.</p>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>단계</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>입력란</td>
+<td>공개할 글을 붙여넣는 칸</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gemini Agent</td>
+<td>공개하면 안 되는 부분을 찾아 목록으로</td>
+</tr>
+<tr>
+<td>3</td>
+<td>인간 참여형 (승인)</td>
+<td>내가 목록을 확인하고 승인</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gemini Agent (Approve 쪽)</td>
+<td>찾은 부분만 고친 공개용 글</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1단계. 빈 워크플로 열기.</strong> <strong>+ 새 에이전트</strong> &gt; → <strong>워크플로</strong> → 오른쪽 아래 <strong>수동 빌드</strong></p>
+<figure><img src="assets/captures/workflow-manual.png" alt="수동 빌드 화면 가운데에 수동 트리거와 단계 추가 버튼, 오른쪽에 트리거 유형과 입력란 필드 추가가 있다" loading="lazy"><figcaption>수동 빌드: 가운데 단계 추가, 오른쪽 입력란 → 필드 추가</figcaption></figure>
+<p><strong>2단계. 입력란 만들기.</strong> 가운데 <strong>수동</strong>을 누르고, 오른쪽 <strong>입력란 → 필드 추가</strong>로 칸을 하나 만들어 이름을 <code>공개할 글</code>로 적습니다.</p>
+<p><strong>3단계. 점검 단계 넣기.</strong> <strong>단계 추가</strong> → <strong>Gemini Agent</strong>를 고르고 지침 칸에 아래를 붙여넣습니다.</p>
+<div class="prompt-box"><div class="prompt-head"><span>점검 단계 지침</span><button class="copy-button" type="button">복사</button></div><pre>너는 외부 공개 전 점검 담당이다. 입력된 '공개할 글'을 읽고, 밖에 공개되면 안 되는 부분을 모두 찾는다.&#10;찾을 것:&#10;1) 고객 개인정보: 이름, 전화번호, 주소, 계약번호&#10;2) 사내 실적 숫자: 처리 건수, 처리율, 목표 달성 여부 등 공개되지 않은 수치&#10;3) 사내 시스템·조직 정보: 내부 시스템 이름, 내부 담당자 이름과 연락처&#10;결과는 표로 쓴다: 찾은 문장 / 종류 / 이유 / 고칠 방향.&#10;찾은 것이 없으면 "공개 금지 정보 없음"이라고만 쓴다. 글을 고쳐 쓰지는 않는다.</pre></div>
+<p><strong>4단계. 승인 단계 넣기.</strong> <strong>단계 추가</strong> → <strong>인간 참여형(Human In The Loop)</strong> 안의 승인 단계를 고릅니다. <strong>Approve</strong>와 <strong>Reject</strong> 두 갈래가 생깁니다.</p>
+<p><strong>5단계. 고치는 단계 넣기.</strong> <strong>Approve</strong> 갈래 아래 <strong>+</strong>를 눌러 <strong>Gemini Agent</strong>를 고르고, 지침 칸에 아래를 붙여넣습니다.</p>
+<div class="prompt-box"><div class="prompt-head"><span>고치기 단계 지침</span><button class="copy-button" type="button">복사</button></div><pre>앞 단계의 점검 표에 나온 부분만 고쳐 공개용 글을 만든다.&#10;- 고객 개인정보는 지운다.&#10;- 사내 실적 숫자는 "크게 개선" 같은 표현으로 바꾸거나 지운다.&#10;- 사내 시스템·담당자 정보는 지운다.&#10;- 점검 표에 없는 문장은 한 글자도 바꾸지 않는다.&#10;마지막에 고친 문장 수를 한 줄로 알린다.</pre></div>
+<p><strong>6단계. 시험하기.</strong> 위쪽 <strong>테스트</strong> 탭에서 아래 가상 글을 <code>공개할 글</code>에 넣고 실행합니다. 승인 단계에서 멈추면 점검 표를 보고 승인합니다.</p>
+<div class="prompt-box"><div class="prompt-head"><span>시험용 가상 글 (교육용, 실제 정보 아님)</span><button class="copy-button" type="button">복사</button></div><pre>[보도자료 초안] 홈앤서비스, 강원 권역 AS 당일처리 강화&#10;홈앤서비스는 11월부터 강원 권역의 AS 당일처리를 강화한다. 10월 강원 권역 AS 처리 건수는 사내 집계 기준 2만 1천 건, 당일처리율 93.4%로 목표를 달성했다.&#10;춘천센터 고객 홍길동(010-0000-0000) 씨는 "공유기 고장이 당일에 해결됐다"고 말했다.&#10;현장 기사는 사내 AS관리시스템으로 출동 일정을 받는다. 문의: 운영기획팀 김대리(내선 0000)</pre></div>
+<p>점검 표에 고객 이름·전화번호, 실적 숫자 2개, 시스템 이름, 담당자 연락처가 잡히면 성공입니다.</p>
+<p><strong>7단계. 켜고 쓰기.</strong> 오른쪽 위 <strong>사용 설정</strong>을 누른 뒤, 채팅창에서 <code>@워크플로이름</code>으로 실행합니다.</p>
+<div class="callout">
+<p><strong>🖱️ 앞 단계 결과 연결</strong></p>
+<p>앞 단계의 결과를 다음 단계로 넘기는 방법이 화면에 따로 보이면 그 안내를 따릅니다. 잘 안 되면 왼쪽 입력칸에 &quot;점검 표를 다음 단계에 넘겨줘&quot;처럼 말로 고쳐 달라고 해 봅니다.</p>
+</div>
+</section>
+<section class="chapter" id="s6"><span class="section-kicker">06</span><h2>실행 시점 고르기 (트리거)</h2>
+<table>
+<thead>
+<tr>
+<th>트리거</th>
+<th>실행 시점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수동</td>
+<td>채팅창에서 <code>@워크플로이름</code>으로 부를 때</td>
+</tr>
+<tr>
+<td>앱 이벤트</td>
+<td>연결된 외부 앱에 일이 생길 때</td>
+</tr>
+<tr>
+<td>일정</td>
+<td>정해진 주기마다</td>
+</tr>
+</tbody>
+</table>
+<p>앱 이벤트와 일정은 관리자가 연결한 데이터가 있어야 쓸 수 있습니다. 이 실습은 수동만 씁니다.</p>
+</section>
+<section class="chapter" id="s7"><span class="section-kicker">07</span><h2>확인</h2>
+<ul class="checklist"><li><label><input type="checkbox" data-check="workflow-1">에이전트와 워크플로의 차이를 말로 설명할 수 있다</label></li><li><label><input type="checkbox" data-check="workflow-2">실적 보고 초안 워크플로를 말로 만들어 테스트 탭에서 실행했다</label></li><li><label><input type="checkbox" data-check="workflow-3">외부 공개 전 점검 워크플로를 수동 빌드로 단계별로 직접 조립해 시험했다</label></li></ul>
+<p><a class="button primary" href="wrapup.html">다음: 정리 →</a></p>
+</section>
+</article></div></main>
+<footer><a class="brand" href="index.html">Money&amp;Works</a><p>Gemini Enterprise 실무 활용 · 홈앤서비스 Staff 교육 · 실습 교재</p><a href="#main">맨 위로 ↑</a></footer><div class="toast" role="status" aria-live="polite"></div><script>(()=>{'use strict';const key='snu-vibe-v1:'+document.body.dataset.page;let state={};const toast=document.querySelector('.toast');function notify(text){toast.textContent=text;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}try{state=JSON.parse(localStorage.getItem(key)||'{}')}catch{}function save(){try{localStorage.setItem(key,JSON.stringify(state))}catch{notify('브라우저 저장을 사용할 수 없습니다. 메모를 복사해 보관하세요.')}}async function copy(text,button){try{if(!navigator.clipboard)throw Error();await navigator.clipboard.writeText(text)}catch{const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.top='-1000px';document.body.append(area);area.select();const ok=document.execCommand('copy');area.remove();if(!ok){notify('본문을 직접 선택해 복사하세요.');return}}const old=button.textContent;button.textContent='복사됨';notify('복사했습니다.');setTimeout(()=>button.textContent=old,1800)}document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',()=>copy(button.closest('.prompt-box').querySelector('pre').textContent,button)));document.querySelectorAll('[data-check]').forEach(input=>{input.checked=!!state[input.dataset.check];input.addEventListener('change',()=>{state[input.dataset.check]=input.checked;save()})});document.querySelectorAll('textarea[data-note]').forEach(input=>{input.value=state[input.dataset.note]||'';input.addEventListener('input',()=>{state[input.dataset.note]=input.value;save()})});document.querySelectorAll('.note-copy').forEach(button=>button.addEventListener('click',()=>{const form=button.closest('.worksheet');copy([...form.querySelectorAll('textarea')].map(area=>area.getAttribute('aria-label')+'\n'+area.value).join('\n\n'),button)}));document.querySelectorAll('.choice-tabs').forEach(group=>{const buttons=[...group.querySelectorAll('button')];function activate(button){buttons.forEach(item=>{const active=item===button;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;document.getElementById(item.getAttribute('aria-controls')).hidden=!active})}buttons.forEach((button,i)=>{button.addEventListener('click',()=>activate(button));button.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const n=event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;activate(buttons[n]);buttons[n].focus()})})});document.querySelector('.print-button')?.addEventListener('click',()=>window.print());const details=[...document.querySelectorAll('details')];let opened=[];addEventListener('beforeprint',()=>{opened=details.map(item=>item.open);details.forEach(item=>item.open=true)});addEventListener('afterprint',()=>details.forEach((item,i)=>item.open=opened[i]));const links=[...document.querySelectorAll('.section-nav a')];if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>{const active=link.hash==='#'+entry.target.id;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')})}})},{rootMargin:'-15% 0px -65% 0px'});document.querySelectorAll('.chapter').forEach(section=>observer.observe(section))}})();
+/* Native details handles click/keyboard opening; add dismiss behavior. */
+(()=>{const menus=[...document.querySelectorAll('.course-menu')];document.addEventListener('pointerdown',event=>{menus.forEach(menu=>{if(!menu.contains(event.target))menu.open=false})});document.addEventListener('keydown',event=>{if(event.key!=='Escape')return;menus.forEach(menu=>{if(menu.open){menu.open=false;menu.querySelector('summary').focus();event.preventDefault()}})});menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false})}))})();
+</script></body></html>
