@@ -17,65 +17,9 @@
 <header class="site-header"><a class="brand" href="index.html"><span>Gemini Enterprise 실무 활용<small>홈앤서비스 STAFF · 실습 교재</small></span></a><nav aria-label="교재"><a href="index.html" >시작</a><a href="security.html" >보안</a><details class="course-menu"><summary class="current-group">실습 <span aria-hidden="true">▾</span></summary><div class="course-weeks"><a href="prompt.html" aria-current="page">대화법</a><a href="canvas.html">Canvas</a><a href="deep-research.html">Deep Research</a><a href="notebook.html">Notebook</a><a href="excel.html">엑셀 뽑기</a><a href="skill.html">스킬</a><a href="agent-slide.html">에이전트 ① (선택)</a><a href="agent-mine.html">에이전트 ②③</a><a href="workflow.html">워크플로 (심화)</a></div></details><a href="help.html" >막혔을 때 · Q&amp;A</a><a href="reference.html" >참고자료</a></nav></header>
 <main id="main"><section class="hero"><div><p class="eyebrow">MODULE 2 · 25 MIN</p><h1>AI에게 어떻게
 시켜야 잘하나요?</h1><p class="lead">묻기 → 눌러 보기 → 내 업무에 맞는지 판단하기</p><div class="hero-meta"><span>2026.11.16 — 12.10</span><span>25분 · 비교 실습</span></div><a class="button primary" href="#s1">PTCF 익히기 <span aria-hidden="true">↗</span></a></div><aside class="hero-aside"><p class="eyebrow">PERSONA · TASK · CONTEXT · FORMAT</p><h2>역할, 과제, 맥락,
-형식을 넣어 시킵니다</h2><p>같은 엑셀로 짧은 지시와 PTCF 지시를 비교해 봅니다.</p><div class="mini-flow"><span>자료</span><i>→</i><span>만들기</span><i>→</i><span>확인</span></div><p class="aside-note">AI가 안내한 기능은 화면에서 직접 확인합니다.</p></aside></section>
-<div class="section-nav-wrap"><nav class="section-nav" aria-label="페이지 구간"><a href="#s1"><span>01</span>화면 둘러보기</a><a href="#s2"><span>02</span>모르면 AI에게 묻기</a><a href="#s3"><span>03</span>PTCF</a><a href="#s4"><span>04</span>퀴즈</a><a href="#s5"><span>05</span>확인</a></nav></div>
-<div class="content-layout"><aside class="margin-note"><span class="eyebrow">LEARNING GUIDE</span><p>결과가 다르면 지시에 빠진 요소를 찾습니다.</p><button class="print-button" type="button">인쇄 / PDF</button><small>체크와 메모는 이 브라우저에만 보관됩니다. 중요한 메모는 복사해 별도로 저장하세요.</small></aside><article class="manuscript"><section class="chapter" id="s1"><span class="section-kicker">01</span><h2>화면 둘러보기</h2>
-<p>새 채팅 · 모델 선택 · 입력창 아래 <strong>[+]</strong>(파일 첨부)와 도구 버튼 · 라이브러리 · 스킬 · 에이전트를 차례로 눌러 봅니다.</p>
-<div class="callout">
-<p><strong>🚫 안 되는 것 먼저</strong></p>
-<p>음성 입력, 메일·캘린더 연결은 쓰지 않습니다. 이런 기능을 쓰는 템플릿은 실행되지 않습니다.</p>
-</div>
-</section>
-<section class="chapter" id="s2"><span class="section-kicker">02</span><h2>모르면 AI에게 묻기</h2>
-<div class="prompt-box"><div class="prompt-head"><span>기능 물어보기</span><button class="copy-button" type="button">복사</button></div><pre>Canvas로 할 수 있는 일을 다 알려줘. 회사에서 직원이 보고서 업무에 무엇을 할 수 있을지 알고 싶어.</pre></div>
-<p>그리고 <strong>반드시 화면에서 눌러 확인</strong>합니다. AI는 자기 기능도 틀리게 설명할 수 있습니다. AI가 &quot;○○로 내보내기&quot;를 안내해도, 실제 [내보내기] 메뉴에 있는지 직접 눌러 봅니다.</p>
-</section>
-<section class="chapter" id="s3"><span class="section-kicker">03</span><h2>좋은 지시 4요소 (PTCF)</h2>
-<p>구글이 Gemini 사용 안내서(Prompting Guide 101)에서 권하는 4요소입니다. 앞 글자를 따서 <strong>PTCF</strong>라고 부릅니다.</p>
-<table>
-<thead>
-<tr>
-<th>요소</th>
-<th>뜻</th>
-<th>예</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>P</strong>ersona (역할)</td>
-<td>누구로서 답할지</td>
-<td>&quot;너는 AS 운영팀의 실적 분석 담당이야&quot;</td>
-</tr>
-<tr>
-<td><strong>T</strong>ask (과제)</td>
-<td>무엇을 할지</td>
-<td>&quot;2026년 10월 실적을 분석해줘&quot;</td>
-</tr>
-<tr>
-<td><strong>C</strong>ontext (맥락)</td>
-<td>어떤 자료와 상황에서</td>
-<td>첨부한 실습 엑셀의 '요약_전사' 시트, 팀장님 보고용</td>
-</tr>
-<tr>
-<td><strong>F</strong>ormat (형식)</td>
-<td>어떤 모양으로</td>
-<td>&quot;목표 대비 표 1개 + 결론 3줄&quot;</td>
-</tr>
-</tbody>
-</table>
-<p>여기에 <strong>&quot;자료에 없는 숫자는 쓰지 마&quot;</strong> 한 줄을 붙이면 AI가 숫자를 지어내는 일이 <strong>줄어듭니다.</strong> 그래도 <strong>완전히 막히지는 않습니다.</strong> AI는 지시를 지키려고 노력할 뿐, 반드시 지킨다는 보장이 없습니다. 그래서 중요한 숫자는 원본 자료와 한 번 맞춰 봅니다.</p>
-<p><strong>실습:</strong> 실습 엑셀을 첨부하고 두 지시를 차례로 넣어 결과를 비교합니다. 아직 받지 않았다면 먼저 내려받으세요.</p>
-<div class="download-row"><a class="button" href="assets/practice-data-2026-10.xlsx" download="홈앤서비스_운영실적_2026-10_가상데이터.xlsx">실습 엑셀 ↓</a></div>
-<p>파일은 입력창의 <strong>+</strong> 버튼 → <strong>파일 업로드</strong>로 올립니다.</p>
-<figure><img src="assets/captures/chat-plus-menu.png" alt="입력창의 + 버튼을 누르면 파일 업로드, Drive에서 파일 추가 메뉴가 나온다" loading="lazy"><figcaption>+ 버튼 → 파일 업로드</figcaption></figure>
-<div class="prompt-box"><div class="prompt-head"><span>나쁜 예</span><button class="copy-button" type="button">복사</button></div><pre>분석해줘</pre></div>
-<div class="prompt-box"><div class="prompt-head"><span>PTCF 예</span><button class="copy-button" type="button">복사</button></div><pre>너는 AS 운영팀의 실적 분석 담당이야.&#10;첨부한 엑셀의 '요약_전사' 시트를 보고 2026년 10월 실적을 분석해줘.&#10;형식: 목표 대비 표 1개 + 팀장님께 드릴 결론 3줄.&#10;자료에 없는 숫자는 쓰지 말고, 계산한 숫자는 계산 방법을 한 줄로 밝혀줘.</pre></div>
-<div class="callout">
-<p><strong>📎 파일 첨부가 안 되면</strong></p>
-<p>엑셀에서 표 범위를 복사해 입력창에 붙여넣어도 됩니다.</p>
-</div>
-</section>
-<section class="chapter" id="s4"><span class="section-kicker">04</span><h2>퀴즈: 이럴 땐 어떻게 시킬까?</h2>
+형식을 넣어 시킵니다</h2><p>내 업무 하나를 짧게 한 번, PTCF로 길게 한 번 보내 결과를 비교합니다.</p><div class="mini-flow"><span>자료</span><i>→</i><span>만들기</span><i>→</i><span>확인</span></div><p class="aside-note">AI가 안내한 기능은 화면에서 직접 확인합니다.</p></aside></section>
+<div class="section-nav-wrap"><nav class="section-nav" aria-label="페이지 구간"><a href="#s1"><span>01</span>퀴즈</a><a href="#s2"><span>02</span>화면 둘러보기</a><a href="#s3"><span>03</span>모르면 AI에게 묻기</a><a href="#s4"><span>04</span>PTCF</a><a href="#s5"><span>05</span>짧게 vs 길게</a><a href="#s6"><span>06</span>확인</a></nav></div>
+<div class="content-layout"><aside class="margin-note"><span class="eyebrow">LEARNING GUIDE</span><p>결과가 다르면 지시에 빠진 요소를 찾습니다.</p><button class="print-button" type="button">인쇄 / PDF</button><small>체크와 메모는 이 브라우저에만 보관됩니다. 중요한 메모는 복사해 별도로 저장하세요.</small></aside><article class="manuscript"><section class="chapter" id="s1"><span class="section-kicker">01</span><h2>퀴즈: 이럴 땐 어떻게 시킬까?</h2>
 <p>먼저 스스로 답해 보고 펼쳐 보세요.</p>
 <details>
 <summary><strong>1. 예시를 넣어 주는 것이 좋다?</strong></summary>
@@ -95,8 +39,71 @@
 <p>연구 결과는 엇갈립니다. 무례하게 말했을 때 정답률이 조금 오른 연구도, 떨어진 연구도 있습니다. 강사의 해석은 이렇습니다. 화를 낼 때 우리는 <strong>왜 틀렸는지, 무엇을 원하는지</strong>를 함께 말합니다. 그래서 AI가 해야 할 방향이 분명해지는 것입니다. 이유 없이 화만 내면 AI도 도울 방법이 없습니다. 화를 낼 필요 없이, 이유와 원하는 것을 말하면 됩니다.</p>
 </details>
 </section>
-<section class="chapter" id="s5"><span class="section-kicker">05</span><h2>확인</h2>
-<ul class="checklist"><li><label><input type="checkbox" data-check="prompt-1">두 결과의 차이를 한 문장으로 말할 수 있다</label></li></ul>
+<section class="chapter" id="s2"><span class="section-kicker">02</span><h2>화면 둘러보기</h2>
+<p>새 채팅 · 모델 선택 · 입력창 아래 <strong>[+]</strong>(파일 첨부)와 도구 버튼 · 라이브러리 · 스킬 · 에이전트를 차례로 눌러 봅니다.</p>
+<div class="callout">
+<p><strong>🚫 안 되는 것 먼저</strong></p>
+<p>음성 입력, 메일·캘린더 연결은 쓰지 않습니다. 이런 기능을 쓰는 템플릿은 실행되지 않습니다.</p>
+</div>
+</section>
+<section class="chapter" id="s3"><span class="section-kicker">03</span><h2>모르면 AI에게 묻기</h2>
+<div class="prompt-box"><div class="prompt-head"><span>기능 물어보기</span><button class="copy-button" type="button">복사</button></div><pre>Canvas로 할 수 있는 일을 다 알려줘. 회사에서 직원이 보고서 업무에 무엇을 할 수 있을지 알고 싶어.</pre></div>
+<p>그리고 <strong>반드시 화면에서 눌러 확인</strong>합니다. AI는 자기 기능도 틀리게 설명할 수 있습니다. AI가 &quot;○○로 내보내기&quot;를 안내해도, 실제 [내보내기] 메뉴에 있는지 직접 눌러 봅니다.</p>
+</section>
+<section class="chapter" id="s4"><span class="section-kicker">04</span><h2>좋은 지시 4요소 (PTCF)</h2>
+<p>구글이 Gemini 사용 안내서(Prompting Guide 101)에서 권하는 4요소입니다. 앞 글자를 따서 <strong>PTCF</strong>라고 부릅니다.</p>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>뜻</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong>ersona (역할)</td>
+<td>누구로서 답할지</td>
+<td>&quot;너는 홈앤서비스 본사 AS 운영팀 대리야&quot;</td>
+</tr>
+<tr>
+<td><strong>T</strong>ask (과제)</td>
+<td>무엇을 할지</td>
+<td>&quot;재방문을 줄일 아이디어를 정리해줘&quot;</td>
+</tr>
+<tr>
+<td><strong>C</strong>ontext (맥락)</td>
+<td>어떤 상황·배경·조건에서</td>
+<td>누가 읽는지, 왜 필요한지, 지금 상황과 제약</td>
+</tr>
+<tr>
+<td><strong>F</strong>ormat (형식)</td>
+<td>어떤 모양으로</td>
+<td>&quot;결론 1줄 + 표 + 개조식 3줄&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>여기에 <strong>&quot;자료에 없는 숫자는 쓰지 마&quot;</strong> 한 줄을 붙이면 AI가 숫자를 지어내는 일이 <strong>줄어듭니다.</strong> 그래도 <strong>완전히 막히지는 않습니다.</strong> AI는 지시를 지키려고 노력할 뿐, 반드시 지킨다는 보장이 없습니다. 그래서 중요한 숫자는 원본 자료와 한 번 맞춰 봅니다.</p>
+</section>
+<section class="chapter" id="s5"><span class="section-kicker">05</span><h2>실습: 짧게 한 줄 vs 길게 PTCF</h2>
+<p>가져오신 <strong>반복 업무 5개</strong> 중 하나를 골라, AI에게 맡긴다고 생각하고 씁니다. 파일은 올리지 않습니다.</p>
+<p><strong>1단계. 모델 바꾸기.</strong> 입력창 아래 모델 선택(처음에는 <strong>Auto</strong>)을 눌러 <strong>최상위 모델</strong>로 바꿉니다.</p>
+<p><strong>2단계. 평소처럼 짧게 보내기.</strong> 고른 업무를 평소 말하듯 한 줄로 보냅니다. 예: <code>재방문 줄이는 방법 알려줘</code></p>
+<p><strong>3단계. 새 채팅에서 길게 다시 보내기.</strong> 같은 일을 PTCF 4요소를 모두 넣어 <strong>입력창에 바로, 최대한 길게</strong> 씁니다. 상황, 걱정되는 점, 혼잣말까지 적어도 됩니다. 형식은 <strong>표·리스트·개조식·불렛</strong>처럼 바로 보기 좋은 모양으로 정해 줍니다.</p>
+<div class="callout">
+<p><strong>⌨️ 줄 바꾸기는 Shift+Enter</strong></p>
+<p>입력창에서 <strong>Enter</strong>만 누르면 바로 보내집니다. 줄을 바꿀 때는 <strong>Shift+Enter</strong>를 누릅니다.</p>
+</div>
+<p>아래는 길게 쓴 예입니다. 내 업무로 바꿔 쓰기 전에 모양을 참고하세요.</p>
+<div class="prompt-box"><div class="prompt-head"><span>길게 쓴 PTCF 예</span><button class="copy-button" type="button">복사</button></div><pre>너는 홈앤서비스 본사 AS 운영팀에서 5년 일한 대리야. 현장 센터와 본사 사이에서 실적을 챙기고 개선안을 만드는 일을 해.&#10;&#10;다음 주 월요일 팀 회의에서 "재방문 줄이기" 아이디어를 발표해야 해.&#10;요즘 재방문 건수가 목표보다 많아서 팀장님이 신경을 많이 쓰고 계셔.&#10;현장에서는 신입 기사님이 늘어서 한 번에 처리를 못 하는 경우가 있다는 이야기도 있고, 자재가 부족해서 다시 가는 경우도 있다고 들었어. 정확한 원인은 아직 몰라.&#10;예산을 새로 받기는 어려워서, 지금 있는 사람과 도구로 바로 해 볼 수 있는 아이디어가 좋겠어.&#10;팀장님은 길게 설명하는 걸 싫어하시고, 회의 자리에서 바로 고를 수 있게 정리된 걸 좋아하셔.&#10;&#10;아래 형식으로 정리해줘.&#10;1. 맨 위에 결론 1줄&#10;2. 아이디어 5개를 표로: 아이디어 / 기대 효과 / 필요한 것 / 다음 주에 바로 시작할 수 있나(○·△·✕)&#10;3. 그중 먼저 해 볼 2개와 이유를 개조식으로&#10;4. 회의 전에 내가 확인해 둘 것 3개를 불렛으로&#10;&#10;모르는 숫자는 지어내지 말고 [확인 필요]라고 써줘.</pre></div>
+<p><strong>4단계. 비교하기.</strong> 두 결과를 나란히 놓고, 무엇이 달라졌는지 느껴 봅니다.</p>
+<div class="callout">
+<p><strong>🔒 회사 자료를 붙여넣을 때</strong></p>
+<p>보안해제가 안 된 문서는 파일 올리기뿐 아니라 <strong>복사·붙여넣기도 되지 않습니다.</strong> 실제 업무 문서를 쓰려면 미리 보안해제해 둡니다. 고객 개인정보는 어떤 경우에도 넣지 않습니다.</p>
+</div>
+</section>
+<section class="chapter" id="s6"><span class="section-kicker">06</span><h2>확인</h2>
+<ul class="checklist"><li><label><input type="checkbox" data-check="prompt-1">모델을 최상위 모델로 바꾸었다</label></li><li><label><input type="checkbox" data-check="prompt-2">같은 일을 짧게 한 번, PTCF로 길게 한 번 보내 보았다</label></li><li><label><input type="checkbox" data-check="prompt-3">두 결과의 차이를 한 문장으로 말할 수 있다</label></li></ul>
 <p><a class="button primary" href="canvas.html">다음: Canvas →</a></p>
 </section>
 </article></div></main>
